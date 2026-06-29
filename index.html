@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Interactive particle symphony — a living canvas responding to every gesture">
+    <title>Flux • Interactive Particle Field</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+
+    <div class="interface">
+        <header class="header">
+            <div class="logo">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2" fill="none"/>
+                    <circle cx="6" cy="6" r="2" fill="currentColor"/>
+                </svg>
+                <span>flux</span>
+            </div>
+            <div class="status">
+                <span class="status-dot"></span>
+                <span class="status-text" id="fps-display">60</span>
+                <span class="status-label">fps</span>
+            </div>
+        </header>
+
+        <div class="center-message" id="center-message">
+            <p class="message-line">Move</p>
+            <p class="message-line delay">to begin</p>
+        </div>
+
+        <div class="mode-bar" id="mode-bar">
+            <button class="mode active" data-mode="field">
+                <span class="mode-marker"></span>
+                Field
+            </button>
+            <button class="mode" data-mode="attract">
+                <span class="mode-marker"></span>
+                Attract
+            </button>
+            <button class="mode" data-mode="repel">
+                <span class="mode-marker"></span>
+                Repel
+            </button>
+            <button class="mode" data-mode="vortex">
+                <span class="mode-marker"></span>
+                Vortex
+            </button>
+            <button class="mode" data-mode="galaxy">
+                <span class="mode-marker"></span>
+                Galaxy
+            </button>
+        </div>
+
+        <div class="hint" id="hint">
+            <span>click</span> ripple
+            <span class="hint-sep"></span>
+            <span>hold</span> attract
+            <span class="hint-sep"></span>
+            <span>double</span> burst
+            <span class="hint-sep"></span>
+            <span>1–5</span> modes
+        </div>
+
+        <button class="fullscreen" id="fullscreen" aria-label="Fullscreen">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M2 6V2h4M10 2h4v4M14 10v4h-4M6 14H2v-4" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+            </svg>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
